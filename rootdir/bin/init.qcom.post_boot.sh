@@ -126,6 +126,11 @@ case "$soc_id" in
     echo "0:1804800 6:2016000" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
     echo 500 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
+    # Configure default schedTune value for foreground/top-app
+    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+    echo 10 > /dev/stune/top-app/schedtune.boost
+    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+
     # Set memory parameters
     configure_memory_parameters
 
@@ -230,6 +235,11 @@ case "$soc_id" in
     echo 100 > /sys/module/cpu_boost/parameters/input_boost_ms
     echo "0:1804800 6:2169600" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
     echo 500 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
+
+    # Configure default schedTune value for foreground/top-app
+    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
+    echo 10 > /dev/stune/top-app/schedtune.boost
+    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
 
     # Set Memory parameters
     configure_memory_parameters
