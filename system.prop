@@ -71,4 +71,6 @@ ro.zram.periodic_wb_delay_hours=24
 ro.sf.force_light_brightness=1
 ro.surface_flinger.has_wide_color_display=false \ 
 ro.surface_flinger.has_HDR_display=false \
-vendor.display.disable_rotator_downscale=1
+vendor.display.disable_rotator_downscale=1 \
+persist.sys.fflag.override.settings_network_and_internet_v2=true
+
