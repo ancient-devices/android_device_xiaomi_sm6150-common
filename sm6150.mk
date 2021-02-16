@@ -267,7 +267,10 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service.xiaomi-libperfmgr
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Protobuf
 PRODUCT_PACKAGES += \
@@ -313,6 +316,8 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    hardware/google/interfaces \
+    hardware/google/pixel \
     hardware/xiaomi
 
 # Telephony
