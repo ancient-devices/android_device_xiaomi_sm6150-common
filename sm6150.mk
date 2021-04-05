@@ -24,6 +24,10 @@ $(call inherit-product, vendor/xiaomi/sm6150-common/sm6150-common-vendor.mk)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Adapt Launch
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/lm/AdaptLaunchFeature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/lm/AdaptLaunchFeature.xml
+
 # AID/fs configs
 PRODUCT_PACKAGES += \
     fs_config_files
