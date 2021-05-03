@@ -111,8 +111,6 @@ case "$soc_id" in
     echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
     # Configure CPU input boost
-    echo "0:1363200 6:1363200" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 100 > /sys/module/cpu_boost/parameters/input_boost_ms
     echo "0:1804800 6:2016000" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
     echo 500 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
@@ -211,8 +209,6 @@ case "$soc_id" in
     echo 85 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/hispeed_load
 
     # Configure CPU input boost
-    echo "0:1324800 6:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
-    echo 100 > /sys/module/cpu_boost/parameters/input_boost_ms
     echo "0:1804800 6:2169600" > /sys/module/cpu_boost/parameters/powerkey_input_boost_freq
     echo 500 > /sys/module/cpu_boost/parameters/powerkey_input_boost_ms
 
